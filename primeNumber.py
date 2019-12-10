@@ -1,4 +1,6 @@
 
+print('This is Prime Number')
+
 def primeNumber(num):
     if num>1:
         for i in range(2,num//2):
@@ -14,4 +16,4 @@ def primeNumber(num):
     else:
         print('Not Prime')
 
-primeNumber(19)
+primeNumber(1)
