@@ -8,3 +8,7 @@ else:
 
     print('Adult Category.....!')
     print('Be the Good Citizen of India.....!')
+<<<<<<< HEAD
+=======
+    print('Developed country in your hands')
+>>>>>>> ageprog
