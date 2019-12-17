@@ -5,3 +5,4 @@ if age < 18 :
 
 else:
     print('Adult Category.....!')
+    print('Be the Good Citizen of India.....!')
