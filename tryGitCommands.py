@@ -5,4 +5,6 @@ if age < 18 :
     print('Update yourself for Developement of India')
 
 else:
+
     print('Adult Category.....!')
+    print('Be the Good Citizen of India.....!')
