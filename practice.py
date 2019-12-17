@@ -1,7 +1,7 @@
-Name=input('Enter Name :')
-if Name == 'Sona':
-    print('Welcome Sona')
+Age =int(input('Enter Age : '))
 
+if Age >= 18 :
+   print('Allowed to do Authorized THings')
 
 else:
-    print('Welcome {}'.format(Name))
+    print('Not Allowed to do Authorized THings')
