@@ -5,3 +5,4 @@ if Age >= 18 :
 
 else:
     print('Not Allowed to do Authorized THings')
+    print('Younger to take decisions')
