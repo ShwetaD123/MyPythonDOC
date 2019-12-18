@@ -12,14 +12,12 @@ def function(num,op):
             print(num - num)
             return 'subtraction =', num - num
 
-        elif op == '/':
-            print(num / num)
-            return 'division =', num / num
+
+
 
         elif op == '*':
             print(num * num)
             return 'Multiplication =', num * num
-
 
 
 
