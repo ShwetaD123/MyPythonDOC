@@ -23,6 +23,9 @@ def function(num,op):
             return 'Multiplication =', num * num
 
 
+        else :
+            return 'something went wrong'
+
 
 print(function(8,'*'))
 
