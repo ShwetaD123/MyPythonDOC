@@ -17,9 +17,6 @@ def function(num,op):
             return 'division =', num / num
 
 
-
-
-
         elif op == '*':
             print(num * num)
             return 'Multiplication =', num * num
