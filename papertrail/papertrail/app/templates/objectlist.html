@@ -1,0 +1,69 @@
+ {% extends 'layout.htm' %}
+ {% block container %}
+ <head>
+     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+ <style>
+h1, h2, h3, h4, h5, h6 {
+    color: #100707;
+    font-weight : bold;
+}
+
+.table-striped tbody tr:nth-of-type(odd):hover,.table-striped tbody tr:nth-of-type(even):hover{
+    background-color: #fff;
+}
+
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #C0CFF1;
+}
+
+
+.h2 {
+    color:#043467
+    font-size: 34px;
+    text-decoration-line: underline;
+   }
+
+.table th, .table td {
+    color: #333;
+    font-size: 16px;
+}
+
+ </style>
+
+  <div class="top-pad">
+      <div class="w3-container">
+      <h2>Image Records</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th><h3>Filename</h3></th>
+          <th><h3>Upload Date</h3></th>
+          <th><h3>Upload Time</h3></th>
+          <th><h3>ImageView</h3></th>
+        </tr>
+      </thead>
+      <tbody>
+
+
+
+        {% for f in files %}
+
+        <tr>
+            <td ><a href="{{ f[0]}}">{{f[1]}}</a></td>
+            <td>{{ f[3] }}</td>
+            <td>{{ f[2] }}</td>
+            <td><a href="{{ f[0]}}">DisplayImage</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+
+{% endblock %}
+

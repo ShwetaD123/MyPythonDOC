@@ -1,0 +1,93 @@
+
+ {% extends 'layout.htm' %}
+ {% block container %}
+ <head>
+     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.h2{
+    color:#043467
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color:#100707;
+    font-weight:bold;
+}
+
+.table-striped tbody tr:nth-of-type(odd):hover,.table-striped tbody tr:nth-of-type(even):hover{
+    background-color: #fff;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #C0CFF1;
+}
+
+
+.table th, .table td {
+   color: #333;
+    font-size: 16px;
+}
+
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+h2 {
+    font-size: 34px;
+    text-decoration-line: underline;
+   }
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+  <div class="top-pad">
+      <div class="w3-container">
+      <h2>Image Details</h2>
+    <table class="table table-striped">
+      <thead>
+
+          <div class="row">
+              <div class="col-5">
+                <img src="{{data['Item'].get('OriginalImageLink')['S']}}" alt="Snow" style="width:100%">
+              </div>
+              <div col-1>
+
+              </div>
+              <div class="col-5">
+                <img src="{{data['Item'].get('ImageLink')['S']}}" style="width:100%">
+              </div>
+          </div>
+        <tr>
+            <th><h3><b>Key</b></h3></th>
+            <th><h3><b>Value</b></h3></th>
+        </tr>
+      </thead>
+      <tbody>
+         {%for i in data["Item"]%}
+            <tr>
+                <td >{{i}}</td>
+                <td>{{data['Item'].get(i)['S']}}</td>
+            </tr>
+
+          {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+
+{% endblock %}
+

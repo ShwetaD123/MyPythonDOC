@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initialscale=1">
+  <title>Papertrail</title>
+  <meta charset="utf-8">
+  <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<style>
+ .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+    color: #060606;
+}
+
+.text-muted {
+    color: #062c52 !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-weight: bold;
+    display: block;
+    font-size: medium;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color:#151414;
+}
+
+.navbar-light .navbar-brand {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    }
+
+
+.navbar-light .navbar-nav .nav-link {
+    border: 1px solid #eee;
+    color: white;
+    font-size: 18px;
+    margin: 4px 2px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus  {
+  background-color: #154167;;
+  color: white;
+}
+
+li nav-item{
+margin: 2px;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.063rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #343a40;
+    text-align: left;
+    background-color: #E6ECF3;
+}
+
+h5, .h5 {
+    font-size: 1.32875rem;
+    color : black;
+}
+.table thead th, .table th, .table td{
+border-top:none;
+border-bottom:none;
+}
+
+</style>
+
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light"style="background-color:#596B8C;" >
+    <a class="navbar-brand" href="{{ url_for('home') }}"><img class="mb-2" src="{{ url_for('static', filename='images/logo.png') }}" height="25" widhth="30"> {{ _('Papertrail') }}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        {% if current_user.is_authenticated %}
+
+          <li class="nav-item">
+<!--<img width="40px" src="https://goo.gl/pB9rpQ"/>-->
+            <a class="nav-link" href="/app/upload"> Upload <span class="sr-only">(current)</span></a>
+          </li>
+         <li class="nav-item">
+            <a class="nav-link" href="/app/upload/bulk">Upload Bulk</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/app/geturl+lobject">List Of Images</a>
+          </li>
+<!--         <li class="nav-item">-->
+<!--            <a class="nav-link" href="/app/bulkObjList">List Of Bulk Images</a>-->
+<!--          </li>-->
+         <li class="nav-item">
+            <a class="nav-link" href="/app/allDbRec">List Of TextRecord</a>
+          </li>
+<!--           <li class="nav-item">-->
+<!--            <a class="nav-link" href="/app/bulkDbRec">List Of Bulk TextRecord</a>-->
+<!--          </li>-->
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              {{ current_user.email }}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/profile">Profile</a>
+              <a class="dropdown-item" href="/settings">Settings</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/logout">Log Out</a>
+            </div>
+          </li>
+
+        {% else %}
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pricing">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/register">{{ _('Register') }}</a>
+          </li>
+          <li>
+            <a class="nav-link" href="/login">{{ _('Log In') }}</a>
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+  </nav>
+  <!-- <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="{{ url_for('home') }}">{{ _('Papertrail') }}</a>
+      </div>
+      <div>
+        <ul class="nav navbar-nav">
+          <li>
+            <a class="navbar-brand" href="{{ url_for('main.display_authors') }}">{{ _('Authors') }}</a>
+          </li>
+          <li>
+            <a class="navbar-brand" href="{{ url_for('main.display_books') }}">{{ _('Books') }}</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          {% if user.has_role('admin') %}
+          <li>
+            <a class="navbar-brand" href="{{ url_for('admin.index') }}">{{ _('Admin') }}</a>
+          </li>
+          {% endif %} {% if not user.is_authenticated %}
+          <li>
+            <a href="/login">
+              <span class="glyphicon glyphicon-log-in"></span> {{ _('Log In') }}</a>
+          </li>
+          {% else %}
+          <li>
+            <a href="/logout">
+              <span class="glyphicon glyphicon-log-out"></span> {{ _('Log Out') }}</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+  <div class="container">
+    {% with messages = get_flashed_messages() %} {% if messages %}
+    <ul class="flashes">
+      {% for message in messages %}
+      <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+    <br/> {% endif %} {% endwith %} {% block container %}{% endblock %}
+    
+    
+  </div>
+
+  {% block footer %}
+    <div class="container">
+      <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+          <div class="col-12 col-md">
+            <img class="mb-2" src="{{ url_for('static', filename='images/logo.png') }}" height="25" widhth="30">
+            <small class="d-block mb-3 text-muted">© 2019</small>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Features</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="#">Cool stuff</a></li>
+              <li><a class="text-muted" href="#">Random feature</a></li>
+              <li><a class="text-muted" href="#">Team feature</a></li>
+              <li><a class="text-muted" href="#">Stuff for developers</a></li>
+              <li><a class="text-muted" href="#">Another one</a></li>
+              <li><a class="text-muted" href="#">Last time</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="#">Resource</a></li>
+              <li><a class="text-muted" href="#">Resource name</a></li>
+              <li><a class="text-muted" href="#">Another resource</a></li>
+              <li><a class="text-muted" href="#">Final resource</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="#">Team</a></li>
+              <li><a class="text-muted" href="#">Locations</a></li>
+              <li><a class="text-muted" href="/privacy">Privacy</a></li>
+              <li><a class="text-muted" href="/terms">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+  {% endblock %}
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!--  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"-->
+<!--    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script> -->
+</body>
+
+</html>
+

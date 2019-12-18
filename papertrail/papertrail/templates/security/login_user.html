@@ -1,0 +1,25 @@
+{% extends 'layout.htm' %}
+{% block container %}
+<div class="col-md-6 offset-md-3">
+  {% from "security/_macros.html" import render_field_with_errors, render_field %}
+  {% include "security/_messages.html" %}
+  <h1 class="display-4">Login</h1>
+  <form action="{{ url_for_security('login') }}" method="POST" name="login_user_form">
+    {{ login_user_form.hidden_tag() }}
+      <div class="form-group">
+        {{ render_field_with_errors(login_user_form.email, class="form-control", type="email", placeholder="Enter Email") }}
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        {{ render_field_with_errors(login_user_form.password, class="form-control", type="password", placeholder="Enter Password") }}
+      </div>
+      <div class="form-check">
+        {{ render_field_with_errors(login_user_form.remember, class="form-check-label") }}
+      </div>
+        {{ render_field(login_user_form.next) }}
+      <div class="form-group">
+        {{ render_field(login_user_form.submit, class="btn btn-primary") }}
+      </div>
+  </form>
+</div>
+{% endblock %}
