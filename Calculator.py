@@ -17,11 +17,6 @@ def function(num,op):
             return 'division =', num / num
 
 
-<<<<<<< HEAD
-print(function(8,'+')
-=======
-
-
 
         elif op == '*':
             print(num * num)
@@ -30,4 +25,4 @@ print(function(8,'+')
 
 
 print(function(8,'*'))
->>>>>>> calbranch
+
