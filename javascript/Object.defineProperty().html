@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+    var obj={counter:0}
+    Object.defineProperty(obj,"reset",{get:function(){
+                                                     this.counter=0;}}),
+
+    Object.defineProperty(obj,"Increment",
+                                        {get:function(){this.counter++;}
+                                    }),
+    Object.defineProperty(obj,"Decrement",{get:function(){
+                                                     this.counter--;}}),
+    Object.defineProperty(obj,"Addition",{set:function(value){
+                                                     this.counter+=value;}}),
+    Object.defineProperty(obj,"Substraction",{set:function(value){
+                                                     this.counter-=value;}});
+
+
+
+    obj.reset;
+    obj.Addition = 10;
+    obj.Substraction = 1;
+    obj.Increment;
+    obj.Decrement;
+    document.getElementById('demo').innerHTML= obj.counter
+
+
+    </script>
+</body>
+</html>

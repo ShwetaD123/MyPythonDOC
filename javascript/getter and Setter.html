@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>Difference Between method call and getter in object as a property</p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+    var person={
+        "fname": "DEval",
+        "Lname" : "Mical",
+        fullname : function() {
+            return this.fname + " " + this.Lname;
+        },
+        get fullName() {
+            return this.Lname+" "+this.fname
+        }
+    }
+    document.getElementById('demo').innerHTML = person.fullname()
+    document.getElementById("demo1").innerHTML = person.fullName
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        var person = {
+            "name" : "Peter",
+            "Address" :"London",
+            "Age" : "No",
+            set age(value){
+                this.Age = value
+            }
+        }
+        person.age = 45;
+        document.getElementById('demo').innerHTML=person.Age
+    
+    </script>
+    
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html> 
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body> 
+    <p>Getter and Setter property allow to set and get the properties of method using lang property</p>
+    <p>This is code for getter</p>
+    <p id = "demo"></p> 
+    <script>
+        var student ={
+            "name" : "Peter",
+            "subject" : "English",
+            get nm(){
+                return this.name
+            }
+        }
+        document.getElementById("demo").innerHTML=student.nm
+    </script>
+</body>
+</html> -->

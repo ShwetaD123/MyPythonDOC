@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+    function emp(fnm,lnm,esal,eadd){
+        this.fname = fnm;
+        this.lname = lnm;
+        this.esalary = esal;
+        this .addr = eadd;
+        this.fullname = function(){
+            return this.fname+" "+this.lname
+        }
+       
+        this.ePincode = function(pincode){
+             this.ePincode =pincode
+        };
+    }
+    var e1 = new emp('john','deo',45000,'pune')
+    e1.ePincode(411022)
+
+    document.getElementById("demo").innerHTML = 
+    "Employee "+e1.fname+" "+"pincode is "+e1.ePincode+" his fullname is "+e1.fullname()
+   
+    
+    </script>
+    
+</body>
+</html>

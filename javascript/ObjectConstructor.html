@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Below results are showing student details :</p>
+    <p id ="demo"></p>
+    <script>
+
+    function student(nm,age,addr){
+        this.sname=nm,
+        this.sage=age,
+        this.address = addr
+        this.fullname = function(){
+            return this.sname+" "+this.lname
+        } 
+    }
+
+    var s1 = new student("Swati",23,'pune');
+    var s2 = new student("Shivam",25,'pune');
+    s1.lname = 'Kulkarni';                           //add property to the constructor.
+    document.getElementById('demo').innerHTML=
+    Object.getOwnPropertyNames(student);
+    // s1.sname+" is the brilliant student of age "+s1.sage+" living in "+s1.address+
+    // " .Her brother "+s2.sname+" teaches her who is "+s2.sage+" years old. "+
+    // s1.sname+"s' fullname is "+s1.sname+" "+s1.lname+" .............."
+    </script>
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+    function person(fname,lname,age,address){
+        this.FirstName = fname;
+        this.LastName = lname;
+        this.Age = age;
+        this.address =address;
+    }
+
+    var p1 =new person('john','Deo','45','Newyork')
+    document.getElementById("demo").innerHTML=
+    "My Best friend name is"+" "+p1.FirstName+" "+p1.LastName
+    </script>
+</body>
+</html> -->

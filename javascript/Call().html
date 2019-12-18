@@ -1,0 +1,58 @@
+<!-- //call method without arguments -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id ='demo'></p>
+    <script>
+        var emp = {fullname:function(city,country){
+            return this.fnm+" "+this.lnm+" "+city+" "+country;
+        }
+        }
+
+        e1 = {
+            fnm : 'tghn',
+            lnm : 'ikjm'
+        }
+        document.getElementById('demo').innerHTML =emp.fullname.call(e1,'Nagpur',"India")
+    </script>
+    
+</body>
+</html>
+
+<!-- //call method without arguments -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id='demo'></p>
+    <script>
+        var student ={fullname : function(){
+            return this.fnm+" "+this.lnm
+        }}
+
+        p1 = {
+            fnm : 'tyui',
+            lnm : "poiuy"
+        }
+        p2 = {
+            fnm : 'qazxcv',
+            lnm : "oplkmnbv"
+        }
+
+        document.getElementById('demo').innerHTML =
+        student.fullname.call(p2)
+    </script>
+
+</body>
+</html> -->

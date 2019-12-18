@@ -1,0 +1,71 @@
+//Function used as value
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id='demo'></p>
+    <script>
+        function myfunction(a=6,b=2,c=1){
+            var x = a+b+c;
+            return x
+            // return arguments.length;
+        }
+ 
+    // var x = myfunction(3,4,3);
+        // document.getElementById('demo').innerHTML=x //function can be used as a value
+        document.getElementById('demo').innerHTML=x  //function can be used as a expression
+</script>
+    
+</body>
+</html>
+
+
+
+
+//Self Invoking Function ...!
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "demo"></p>
+    <script>
+        (function (){
+        document.getElementById("demo").innerHTML = "hello friends how r you!";
+    })();
+    </script>
+    
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id ="demo"></p>
+    <script>
+    var s1 =function(a,b){ return a/b}
+    function add (x,y){
+        return x*y
+    }
+    x=add(3,4)
+    document.getElementById("demo").innerHTML = s1(40,5)
+    </script>
+</body>
+</html> -->

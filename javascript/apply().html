@@ -1,0 +1,90 @@
+
+
+<!-- //stimulate max method -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "demo"></p>
+    <script>
+    // document.getElementById("demo").innerHTML = Math.max(5,8,7,9,3,44,2)
+    // document.getElementById("demo").innerHTML = Math.min(5,8,7,9,3,44,2)
+    // document.getElementById("demo").innerHTML = Math.max.apply(null,[5,8,7,9,3,44,2])
+    // document.getElementById("demo").innerHTML = Math.min.apply(Math,[5,8,7,9,3,44,2])
+    // document.getElementById("demo").innerHTML = Math.min.apply(0,[5,8,7,9,3,44,2])
+    // document.getElementById("demo").innerHTML = Math.min.apply("",[5,8,7,9,3,44,2])
+    document.getElementById("demo").innerHTML = Math.min.apply(5,[5,8,7,9,3,44,2])
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "demo"></p>
+    <script>
+        var student ={
+            fullname : function(city,pincode){
+                return this.fname + " "+this.lname +" "+ city+" "+pincode
+            }
+        }
+
+        s1 = {
+            fname : "sdfghj",
+            lname : "erfghn"
+        }
+
+        var x = student.fullname.apply(s1,['Pune',456852])
+        document.getElementById('demo').innerHTML = x
+    </script>
+    
+</body>
+</html>
+
+ -->
+
+<!-- //apply() without argument -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "demo"></p>
+    <script>
+        var person = {fullname : function (){
+            return this.fname+" "+this.lname
+        }}
+        var person1 = {
+            fname : "skd",
+            lname : "pokj"
+        }
+        var x = person.fullname.apply(person1)
+        document.getElementById("demo").innerHTML=x
+    </script>
+    
+</body>
+</html> -->

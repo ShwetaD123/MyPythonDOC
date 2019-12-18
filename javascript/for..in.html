@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>For...in loop Practical....</p>
+    <p id = "demo"></p>
+    <script>
+    txtDetail = ""
+    var person = {"Name":"Canne","lname":"pete","age":36}
+    person.personality = "cool"
+    person.place = "Nagpur"     //--------------Adding property to the object
+    delete person.personality   //-------------deleting property from the object
+    var i
+    for (i in person) {
+        txtDetail += person[i]+" ";
+        
+    }
+
+    document.getElementById("demo").innerHTML=txtDetail
+</script>
+    
+    
+</body>
+</html>

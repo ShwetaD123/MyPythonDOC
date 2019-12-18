@@ -1,0 +1,91 @@
+<!--================= Automatic Validations ============== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form name="myform" method="post">
+    Name : <input type="text" name="fname" required><br><br>
+    Age : <input type="text" name="age" required><br><br>   
+    <input type="submit" value="Submit">
+   </form>
+
+
+
+    
+</body>
+</html>
+
+
+
+<!-- Numeric Validation -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input id = "num">
+    <button type="button" onclick="myfunc()">Submit</button>
+    <p id = "demo"></p>
+
+    <script>
+        function myfunc(){
+            var x ,text;
+            x = document.getElementById("num").value;
+            if (isNaN(x) || x>10 || x<1){
+                text = "Invalide Inputs";
+            }
+            else{
+                text = "Valid Inputs";
+            }
+            document.getElementById("demo").innerHTML =text;
+            
+        }
+    </script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+<!-- FORM FIELD VALIDATIONS -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+        <script>
+                function validateForm(){
+                    var x = document.forms['myform']['fname'].value;
+                    if (x == ""){
+                        alert("Please fill the field");
+                        return false;
+                    }
+                }
+            </script>
+
+    <form name="myform" onsubmit="return validateForm()" method="post">
+    Name : <input type="number" name="fname">
+    <input type="submit" value = "Submit">
+    </form>
+    
+</body>
+</html> -->

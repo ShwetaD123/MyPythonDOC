@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        var student={
+            fname :"shradha",
+            lname :"kakde",
+            age : 23
+        }
+        Object.defineProperty(student,"fullname",{get:function(){return this.fname+" "+this.lname}})
+        Object.defineProperty(student,'changename',{set : function(name){this.fname = name}})
+        this.changename('MInakshi')
+        // document.getElementById('demo').innerHTML=
+        // Object.defineProperty(student,"Schlnm",{value : 'MVK'})
+        document.getElementById("demo").innerHTML=student.fullname
+        // Object.getOwnPropertyNames(student)+ " "+
+        // Object.keys(student)              //getting proprty names
+    </script>
+</body>
+</html>

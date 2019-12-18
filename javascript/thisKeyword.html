@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "demo"></p>
+    <script>
+    var person ={
+        "fname" : "sHweta",
+        "Age" : 20,
+        "fnameUPper" : function(){
+            return this.fname.toUpperCase()
+
+        },
+        "AgetoString" : function(){
+            return this.Age.toString()
+        }
+    }
+    document.getElementById("demo").innerHTML=person.fnameUPper() +" "+ person.AgetoString()
+    // document.getElementById("demo").innerHTML=person.AgetoString()
+
+</script>
+</body>
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "demo"></p>
+    <p id = "demo1"></p>
+    <script>
+        var message = "Way to success is HardWork....!"
+        x=message.toUpperCase()
+        var person={
+            'fname':"fghj",
+            "lname":"werert",
+            fullname:function(){
+                return this.fname+ " "+ this.lname},  //this keyword    Referes to the owner of the object i.e is nothing but person
+         
+            }
+        document.getElementById("demo").innerHTML=person.fullname //returns function defination as 
+// "function(){ return this.fname+ " "+ this.lname //this keyword Referes to the owner of the object i.e is nothing but person }"
+document.getElementById("demo").innerHTML=person.fullname()
+document.getElementById("demo1").innerHTML=x
+
+    </script>
+
+</body>
+</html> -->

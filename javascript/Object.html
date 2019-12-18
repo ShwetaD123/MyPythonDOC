@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>Objects in javascripts are mutable</p>
+    <p id="demo"></p>
+    <script>
+        var x = {"fname":"John" ,"lname": "Deo"}
+        person=x
+        person.fname = "Johny"
+        document.getElementById("demo").innerHTML=
+        "The value of object is "+person.fname + " "+ person.lname + "  "+"<br>"+
+        "Name of person is"+" "+person['fname']+"<br>"+
+        "And his surname is "+person.lname;
+
+
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<body>
+    <p style="font-size: 25px ; font-style: bold ; font-family: sans-serif">Object creation in javascript using new keyword</p>
+    <p id = "demo"></p>
+    <script>    
+        var student = new Object();
+        student.name = "Naina";
+        student.lname = "Jaiswal";
+        student.Age = 18
+        document.getElementById("demo").innerHTML=
+        student.name+"  "+student.lname +"  and her age is"+student.Age
+    </script>
+
+</body>
+</html>
+ -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>Object creation using object literals </p>
+    <p id="demo"></p>
+    <script>
+        var person = {
+
+            "fname":"Jay",
+            "lname" : "Jha",
+            "Age" : 42
+
+        }
+        document.getElementById('demo').innerHTML=
+        "Detail of that person is Full name = "+ person.fname +" "+person.lname + "<br>"+"Age is  " + person.Age
+    </script>
+</body>
+</html> -->

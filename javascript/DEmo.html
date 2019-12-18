@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function myfunction(){
+            document.getElementById("scrptHead").innerHTML ="This is element changed by script in head tag."
+        }
+    </script>
+</head>
+<body>
+    <p id ='cssstyle'>COLOR is going to change</p>
+    <p id = "Demo">This is going to change.....!</p>
+    <p id = "demo" style="display: none">This is hidden now it is active.....!</p>
+    <p id = "scrptHead">This is SCript in head example....!</p>
+
+    <!-- <button type="button" onclick='document.getElementById("Demo").innerHTML="Changed the content of HTML page"'>ClickToChange</button> -->
+<button type="button" onclick= "document.getElementById('Demo').innerHTML='I have change the content'">ClickMe</button>
+
+
+<br><br>//Style change code
+<br>
+<button type="button" onclick= "document.getElementById('Demo').style.color='RED'">ClickToRed</button>
+<button type="button" onclick= "document.getElementById('cssstyle').style.display='none'">ThisIsVanished</button>
+
+<button type="button" onclick= "document.getElementById('demo').style.display='block'">Need to visible</button>
+<button type="button" onclick= "myfunction()">Script In Head</button>
+<script>
+function mfunction(){
+    document.getElementById("Demo").style.color="Green"
+    document.getElementById("Demo").style.fontStyle="bold"
+
+}
+</script>
+<button type="button" onclick= "mfunction()">Script In Body</button>
+
+</body>
+</html>

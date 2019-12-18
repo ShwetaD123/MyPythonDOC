@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "demo"></p>
+    <button onclick="document.getElementById('demo').innerHTML=Date()">DateById</button> ....changes elements of the id <br><br> 
+    <button onclick="this.innerHTML = Date()" >DateBythis.innerHTML</button>  //By this.innerHTML changes own element
+    <script>
+    function myfunction(){
+        document.getElementById("demo").innerHTML = Date()
+
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>Text</h1>
+    <div id="displayText"></div>
+    <script>
+    document.getElementById("#displayText").innerHTML = "qwertyu";
+    </script>
+</body>
+</html>  -->
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Document</title>
+        <script>
+            function myfunction(){
+                document.getElementById('MyFunc').innerHTML="This paragraph is changed now";
+                document.getElementById('MyFunc').style.fontSize="35";
+                document.getElementById('MyFunc').style.color="orange"
+
+
+            }
+        </script>
+    </head>
+
+<body>
+
+<h2  id = "demo1">WELCOME TO JavaScript WORLD</h2>
+<p id="demo">This is onclick button functionality Manipulate/Chnaging the HTML content .....JavaScript Can Change HTML Content</p>
+<button type="button" onclick='document.getElementById("demo").innerHTML="Heartly welcome"'>Click on it</button>
+
+<p  id = "demo1">ByJavaScript Can Change HTML Styles (CSS)</p>
+<button type="button" onclick="document.getElementById('demo1').style.color = 'red'">ClickToChangeColor</button>
+<button type="button" onclick="document.getElementById('demo1').style.fontSize = '45'">ClickToChangeSize</button>
+<!-- <button type="button" onclick="document.getElementById('mygif').src='/home/ubantu/Downloads/WPq2.gif'">Click me to open</button>
+<img id="mygif" src="'/home/ubantu/Downloads/WPq2.gif'">
+<button type="button" onclick="document.getElementById('mygif').src='/home/ubantu/Downloads/WPq2.gif'">Click me to close</button> -->
+
+<p id = "hide"> JavaScript can hide Anything</p>
+<button type="button" onclick="document.getElementById('hide').style.display= 'none'">Click TO Hide</button>
+
+
+<p> JavaScript can Show/Display Anything</p>
+<p id = "show" style="display: none"> Do you like this</p>
+<button type="button" onclick="document.getElementById('show').style.display= 'block'">Click TO Show</button>
+
+<p id="MyFunc">This is going to be change</p>
+<button type="button" onclick="myfunction()">Click to Run Function</button>
+
+</body>
+</html>
+
